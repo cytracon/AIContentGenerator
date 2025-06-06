@@ -1,0 +1,31 @@
+<?php
+/**
+ * @var $block \Cytracon\AIContentGenerator\Block\Adminhtml\Head
+ */
+$dataHelper = $this->helper(\Cytracon\AIContentGenerator\Helper\Data::class);
+?>
+<script>
+    window.aiContentGenerator = {
+        isEnabled: true,
+        generateTextUrl: '<?= /* @noEscape */ $block->getUrl('mgzaicg/ai/generateText') ?>',
+        loadSettingsUrl: '<?= /* @noEscape */ $block->getUrl('mgzaicg/ai/loadSettings') ?>',
+        saveSettingsUrl: '<?= /* @noEscape */ $block->getUrl('mgzaicg/ai/saveSettings') ?>',
+        appInformation: {
+            version: "<?= /* @noEscape */ $dataHelper->getAppVersion() ?>"
+        },
+        suggestions: [
+            "<?= /* @noEscape */ __('Write a unique 3-7 word headline for a page about [topic]. Make it enticing to [target audience].') ?>",
+            "<?= /* @noEscape */ __('Create a compelling call-to-action (CTA) for a landing page promoting [product or service].') ?>",
+            "<?= /* @noEscape */ __('Write a 4-sentence About section for [company name and details]. Mention [information to include].') ?>",
+            "<?= /* @noEscape */ __('Craft a 3-sentence description for a specific category: [category name]. Include the following in the description: [category details].') ?>",
+            "<?= /* @noEscape */ __('Write a unique and compelling 4-8 word title for a section about [section details].') ?>"
+        ],
+        variables: {
+            productName: "<?= /* @noEscape */ $block->getProductName() ?>",
+            categoryName: "<?= /* @noEscape */ $block->getCategoryName() ?>",
+            pageName: "<?= /* @noEscape */ $block->getPageName() ?>",
+        }
+    }
+    // Fix conflict with Prototype
+    const originalArrayFrom = Array.from;
+</script>

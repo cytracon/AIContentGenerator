@@ -1,0 +1,22 @@
+<div class="mgz-aicg-wrapper">
+    <textarea class="admin__control-textarea" data-bind="
+    value: value,
+    valueUpdate: valueUpdate,
+    hasFocus: focused,
+    attr: {
+        name: inputName,
+        cols: cols,
+        rows: rows,
+        'aria-describedby': noticeId,
+        placeholder: placeholder,
+        id: uid,
+        disabled: disabled
+    }"></textarea>
+    <!-- ko if: isEnabled() -->
+    <div class="mgz-aicg-btn" data-bind="css: {'_actived': isActived},hasFocus: isActived,event: {keypress: handleKeyPress}" click="openModal" tabindex="0">
+        <span class="mgz-aicg-text" text="getText()"></span>
+        <span class="mgz-aicg-icon">
+        </span>
+    </div>
+    <!-- /ko -->
+</div>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Cytracon
+ *
+ * This source file is subject to the Cytracon Software License, which is available at
+https://www.cytracon.com/license.
+ * Do not edit or add to this file if you wish to upgrade the to newer versions in the future.
+ * If you wish to customize this module for your needs.
+ * Please refer to https://www.cytracon.com for more information.
+ *
+ * @category  Cytracon
+ * @package   Cytracon_AIContentGenerator
+ * @copyright Copyright (C) 2024 Cytracon (https://www.cytracon.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<mgzaicg>
+			<general>
+				<enabled>1</enabled>
+				<model>gpt-4o</model>
+			</general>
+		</mgzaicg>
+		<dev>
+            <js>
+                <minify_exclude>
+                    <ai_content_generator>/Cytracon_AIContentGenerator/</ai_content_generator>
+                </minify_exclude>
+            </js>
+        </dev>
+	</default>
+</config>

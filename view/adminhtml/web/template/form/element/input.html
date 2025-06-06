@@ -1,0 +1,23 @@
+<div class="mgz-aicg-wrapper">
+    <input class="admin__control-text" type="text"
+    data-bind="
+        event: {change: userChanges},
+        value: value,
+        hasFocus: focused,
+        valueUpdate: valueUpdate,
+        attr: {
+            name: inputName,
+            placeholder: placeholder,
+            'aria-describedby': noticeId,
+            id: uid,
+            disabled: disabled,
+            maxlength: 255
+    }"/>
+    <!-- ko if: isEnabled() -->
+    <div class="mgz-aicg-btn" data-bind="css: {'_actived': isActived},hasFocus: isActived,event: {keypress: handleKeyPress}" click="openModal" tabindex="0">
+        <span class="mgz-aicg-text" text="getText()"></span>
+        <span class="mgz-aicg-icon">
+        </span>
+    </div>
+    <!-- /ko -->
+</div>

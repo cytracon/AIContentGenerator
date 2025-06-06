@@ -1,0 +1,42 @@
+body.mgz-aicg-loading,
+body.mgz-aicg-loading * {
+  cursor: wait;
+}
+
+.mgz-aicg-wrapper {
+  position: relative;
+
+  .mgz-aicg-btn {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    padding: 0 3px;
+    min-height: 27px;
+    cursor: pointer;
+
+    &._actived,
+    &:hover {
+      background: #F7EAFF;
+  
+      .mgz-aicg-text {
+        display: inline-block;
+      }
+    }
+  }
+
+  .mgz-aicg-text {
+    display: none;
+    padding: 0 3px;
+    color: #A82DFD;
+  }
+
+  .mgz-aicg-icon {
+    width: 24px;
+    height: 24px;
+    background: url('../Magezon_AIContentGenerator/images/ai.svg') center center no-repeat;
+    display: inline-block;  
+  }
+}

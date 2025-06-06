@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Cytracon
+ *
+ * This source file is subject to the Cytracon Software License, which is available at
+https://www.cytracon.com/license.
+ * Do not edit or add to this file if you wish to upgrade the to newer versions in the future.
+ * If you wish to customize this module for your needs.
+ * Please refer to https://www.cytracon.com for more information.
+ *
+ * @category  Cytracon
+ * @package   Cytracon_AIContentGenerator
+ * @copyright Copyright (C) 2024 Cytracon (https://www.cytracon.com)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Cytracon_AIContentGenerator::build/ui/st.css" />
+        <css src="Cytracon_AIContentGenerator::build/ui/style.css" />
+        <css src="Cytracon_AIContentGenerator::build/form/st.css" />
+        <css src="Cytracon_AIContentGenerator::build/modal/st.css" />
+        <css src="Cytracon_AIContentGenerator::build/ai-content-generator/st.css" />
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Cytracon\AIContentGenerator\Block\Adminhtml\Head" name="mgzaicg.head"
+                template="Cytracon_AIContentGenerator::head.phtml" before="-"
+                ifconfig="mgzaicg/general/enabled" />
+        </referenceContainer>
+    </body>
+</page>
